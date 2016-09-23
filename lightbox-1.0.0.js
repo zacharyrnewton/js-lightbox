@@ -30,6 +30,9 @@ $( ".js-lightbox-zn-trigger" ).each(function() {
       if ($(window).width() < 820) {
         $('.js-lightbox-zn-content-container').css({'position':'absolute', 'top': '50%', 'left':'50%', 'transform':'translateX(-50%) translateY(-50%)', 'z-index':'1005', 'width':'95%'});
       }
+      if ($(window).width() > 1280) {
+        $('.js-lightbox-zn-content-container').css({'position':'absolute', 'top': '50%', 'left':'50%', 'transform':'translateX(-50%) translateY(-50%)', 'z-index':'1005', 'width':'62.5%'});
+      }
       else {
         $('.js-lightbox-zn-content-container').css({'position':'absolute', 'top': '50%', 'left':'50%', 'transform':'translateX(-50%) translateY(-50%)', 'z-index':'1005', 'width':'800px'});
       }
