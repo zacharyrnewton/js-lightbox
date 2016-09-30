@@ -1,4 +1,4 @@
-$( ".js-lightbox-zn-trigger" ).each(function() {
+$( ".js-lightbox-trigger" ).each(function() {
 
   var $type = $(this).attr('data-type');
   var $host = $(this).attr('data-host');
