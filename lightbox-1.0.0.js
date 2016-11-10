@@ -1,4 +1,4 @@
-$( ".js-lightbox-trigger" ).each(function() {
+$( ".js-lt" ).each(function() {
 
   var $type = $(this).attr('data-type');
   var $host = $(this).attr('data-host');
