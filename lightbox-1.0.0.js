@@ -66,6 +66,7 @@ $( ".js-lt" ).each(function() {
 
     //Site Image
     if ($type === "image"){
+      $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $path + '">');
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
       }
@@ -75,11 +76,11 @@ $( ".js-lt" ).each(function() {
       else {
         $('.js-lightbox-content-container').css({'width':'800px', 'max-height':'80%', 'overflow':'scroll'});
       }
-      $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $path + '">');
     }
 
     //Site Video
     if ($type === "video"){
+      $('.js-lightbox-content-container').append('<video style="width:100%;height:auto;" controls autoplay><source src="' + $path + '" type="video/mp4"> </video>');
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%'});
       }
@@ -89,7 +90,6 @@ $( ".js-lt" ).each(function() {
       else {
         $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px'});
       }
-      $('.js-lightbox-content-container').append('<video style="width:100%;height:auto;" controls autoplay><source src="' + $path + '" type="video/mp4"> </video>');
     }
 
     //Close Lightbox
