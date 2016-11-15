@@ -79,7 +79,7 @@ $( ".lb-js" ).each(function() {
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%'});
       }
-      if ($(window).width() > 1280) {
+      else if ($(window).width() > 1280) {
         $('.js-lightbox-content-container').css({'width':'62.5%'});
       }
       else {
@@ -93,11 +93,11 @@ $( ".lb-js" ).each(function() {
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
       }
-      if ($(window).width() > 1280) {
+      else if ($(window).width() > 1280) {
         $('.js-lightbox-content-container').css({'width':'62.5%', 'max-height':'80%', 'overflow':'scroll'});
       }
       else {
-        $('.js-lightbox-content-container').css({'width':'800px', 'max-height':'80%', 'overflow':'scroll'});
+        $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
       }
     }
 
@@ -107,7 +107,7 @@ $( ".lb-js" ).each(function() {
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%'});
       }
-      if ($(window).width() > 1280) {
+      else if ($(window).width() > 1280) {
         $('.js-lightbox-content-container').css({'width':'62.5%'});
       }
       else {

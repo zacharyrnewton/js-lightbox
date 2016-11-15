@@ -7,6 +7,8 @@ Requirements:
 Class: lb-js
 
 
-Supported content: Youtube & Vimeo iframes, HTML5 MP4 Videos, Images
+Supported types: Iframe, Image, Video
+
+Supported hosts: Youtube, Vimeo
 
 Supported themes: Dark(default), Light, Cool, Warm, Custom(custom has support for images and the lightbox close button)
