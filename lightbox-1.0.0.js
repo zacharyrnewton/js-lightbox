@@ -1,4 +1,4 @@
-$( ".js-lt" ).each(function() {
+$( ".lb-js" ).each(function() {
 
   var $theme = $(this).attr('data-theme');
   var $type = $(this).attr('data-type');
@@ -23,6 +23,13 @@ $( ".js-lt" ).each(function() {
     //Light Theme
     if ($theme === "light") {
       $('.js-lightbox-wrapper').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-left-diagonal').css({'background':'#000000'});
+      $('.js-lightbox-close-right-diagonal').css({'background':'#000000'});
+    }
+
+    //Cool
+    if ($theme === "cool") {
+      $('.js-lightbox-wrapper').css({'background':'#000023'});
       $('.js-lightbox-close-left-diagonal').css({'background':'#000000'});
       $('.js-lightbox-close-right-diagonal').css({'background':'#000000'});
     }
