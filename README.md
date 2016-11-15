@@ -4,11 +4,11 @@ Single JavaScript File LightBox
 Requirements:
   jQuery
 
-Class: lb-js
+Lightbox Call Class: lb-js
 
 
-Supported types: Iframe, Image, Video
+Supported types: embed, image, video
 
-Supported hosts: Youtube, Vimeo
+Supported hosts: youtube, vimeo
 
 Supported themes: Dark(default), Light, Cool, Warm, Custom(custom has support for images and the lightbox close button)

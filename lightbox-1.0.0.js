@@ -60,7 +60,7 @@ $( ".lb-js" ).each(function() {
     //Content Type
 
     //Youtube Hosted
-    if ($type === "iframe" && $host === "youtube"){
+    if ($type === "embed" && $host === "youtube"){
       $('.js-lightbox-content-container').append('<div class="js-lightbox-iframe-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" src="' + $path + '?autoplay=1"></iframe></div>');
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%'});
@@ -74,7 +74,7 @@ $( ".lb-js" ).each(function() {
     }
 
     //Vimeo Hosted
-    if ($type === "iframe" && $host === "vimeo"){
+    if ($type === "embed" && $host === "vimeo"){
       $('.js-lightbox-content-container').append('<div class="js-lightbox-iframe-wrapper" style="position:relative;padding-bottom:56.25%;padding-top:25px;height:0;" ><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" src="' + $path + 'autoplay=1"></iframe></div>');
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%'});
