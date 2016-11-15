@@ -116,8 +116,11 @@ $( ".lb-js" ).each(function() {
     }
 
     //Close Lightbox
-    $('.js-lightbox-close').on('click', function(){
+    $('.js-lightbox-close, .js-lightbox-wrapper').on('click', function(){
       $('.js-lightbox-wrapper').remove();
+    });
+    $('.js-lightbox-content-container').click(function(event){
+      event.stopPropagation();
     });
   });
 });
