@@ -1,6 +1,8 @@
 $( ".lb-js" ).each(function() {
 
   var $theme = $(this).attr('data-theme');
+  var $cust_theme = $(this).attr('data-custom-theme');
+  var $cust_theme_close = $(this).attr('data-custom-theme-close');
   var $type = $(this).attr('data-type');
   var $host = $(this).attr('data-host');
   var $path = $(this).attr('data-path');
@@ -28,17 +30,31 @@ $( ".lb-js" ).each(function() {
     }
 
     //Cool
-    if ($theme === "cool") {
-      $('.js-lightbox-wrapper').css({'background':'#000023'});
-      $('.js-lightbox-close-left-diagonal').css({'background':'#000000'});
-      $('.js-lightbox-close-right-diagonal').css({'background':'#000000'});
+    else if ($theme === "cool") {
+      $('.js-lightbox-wrapper').css({'background':'#000014'});
+      $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+    }
+
+    //Warm
+    else if ($theme === "warm") {
+      $('.js-lightbox-wrapper').css({'background':'#140A00'});
+      $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+    }
+
+    //Custom
+    else if ($theme === "custom") {
+      $('.js-lightbox-wrapper').css({'background':' ' + $cust_theme + ' ','background-size':'cover','background-position':'center center'});
+      $('.js-lightbox-close-left-diagonal').css({'background':' ' + $cust_theme_close + ' '});
+      $('.js-lightbox-close-right-diagonal').css({'background':' ' + $cust_theme_close + ' '});
     }
 
     //Default Dark Theme
     else {
       $('.js-lightbox-wrapper').css({'background':'#111'});
-      $('.js-lightbox-close-left-diagonal').css({'background':'white'});
-      $('.js-lightbox-close-right-diagonal').css({'background':'white'});
+      $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
     }
 
     //Content Type
@@ -49,7 +65,7 @@ $( ".lb-js" ).each(function() {
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%'});
       }
-      if ($(window).width() > 1280) {
+      else if ($(window).width() > 1280) {
         $('.js-lightbox-content-container').css({'width':'62.5%'});
       }
       else {
