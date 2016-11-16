@@ -1,4 +1,6 @@
 $( ".lb-js" ).each(function() {
+  var $modal_content = $( ".lb-js-modal" ).clone();
+  $( ".lb-js-modal" ).children().hide();
 
   var $theme = $(this).attr('data-theme');
   var $cust_theme = $(this).attr('data-custom-theme');
@@ -104,6 +106,21 @@ $( ".lb-js" ).each(function() {
     //Site Video
     if ($type === "video"){
       $('.js-lightbox-content-container').append('<video style="width:100%;height:auto;" controls autoplay><source src="' + $path + '" type="video/mp4"> </video>');
+      if ($(window).width() < 820) {
+        $('.js-lightbox-content-container').css({'width':'95%'});
+      }
+      else if ($(window).width() > 1280) {
+        $('.js-lightbox-content-container').css({'width':'62.5%'});
+      }
+      else {
+        $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px'});
+      }
+    }
+
+    //Modal
+    if ($type === "modal"){
+      $($modal_content).appendTo('.js-lightbox-content-container');
+      $( ".lb-js-modal" ).children().show();
       if ($(window).width() < 820) {
         $('.js-lightbox-content-container').css({'width':'95%'});
       }
