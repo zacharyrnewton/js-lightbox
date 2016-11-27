@@ -15,8 +15,8 @@ $( ".lb-js" ).each(function() {
     //Lightbox Hierarchy
     $('body').append('<div class="js-lightbox-wrapper"><div class="js-lightbox-close"><div class="js-lightbox-close-wrapper"><div class="js-lightbox-close-left-diagonal"></div><div class="js-lightbox-close-right-diagonal"></div></div></div><div class="js-lightbox-content-container"></div></div>');
     //Structure
-    $('.js-lightbox-wrapper').css({'position':'fixed', 'top':'0', 'right':'0', 'bottom':'0', 'left':'0', 'z-index':'1000','display':'flex','flex-direction':'column','align-items':'center','justify-content':'center'});
-    $('.js-lightbox-content-container').css({'z-index':'1005'});
+    $('.js-lightbox-wrapper').css({'position':'fixed', 'top':'0', 'right':'0', 'bottom':'0', 'left':'0', 'z-index':'1000','display':'flex','flex-direction':'column','align-items':'center','justify-content':'center'}).hide(0).delay(100).fadeIn(100);
+    $('.js-lightbox-content-container').css({'z-index':'1005'}).hide(0).delay(100).fadeIn(100);
     $('.js-lightbox-close').css({'position':'absolute', 'top':'20px', 'right':'20px', 'z-index':'1010', 'height':'16px', 'width':'16px', 'cursor':'pointer'});
     $('.js-lightbox-close-wrapper').css({'transform': 'translateY(6px) translateX(-1px)'});
     $('.js-lightbox-close-left-diagonal').css({'content':'""', 'display':'block', 'height':'2px', 'width':'16px', 'position':'relative', 'transform-origin': 'center', 'transform': 'rotate(-45deg) translateY(1.35px)'});
@@ -29,6 +29,13 @@ $( ".lb-js" ).each(function() {
       $('.js-lightbox-wrapper').css({'background':'#FFFFFF'});
       $('.js-lightbox-close-left-diagonal').css({'background':'#000000'});
       $('.js-lightbox-close-right-diagonal').css({'background':'#000000'});
+    }
+
+    //Trans Theme
+    if ($theme === "trans") {
+      $('.js-lightbox-wrapper').css({'background':'rgba(10,10,10,0.8)'});
+      $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
     }
 
     //Cool
@@ -134,7 +141,10 @@ $( ".lb-js" ).each(function() {
 
     //Close Lightbox
     $('.js-lightbox-close, .js-lightbox-wrapper').on('click', function(){
-      $('.js-lightbox-wrapper').remove();
+      $('.js-lightbox-wrapper').fadeOut(100);
+      setTimeout(function() {
+       $('.js-lightbox-wrapper').remove();
+     }, 100);
     });
     $('.js-lightbox-content-container').click(function(event){
       event.stopPropagation();
