@@ -109,6 +109,35 @@ $( ".lb-js" ).each(function() {
         $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
       }
     }
+    //Image Auto
+    if ($path === "auto"){
+      var $element = $(this).tagName;
+      if ($element === "IMG"){
+        var $autoPathImg = $(this).attr('src');
+        $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $autoPathImg + '">');
+        if ($(window).width() < 820) {
+          $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
+        }
+        else if ($(window).width() > 1280) {
+          $('.js-lightbox-content-container').css({'width':'62.5%', 'max-height':'80%', 'overflow':'scroll'});
+        }
+        else {
+          $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
+        }
+      } else {
+        var $autoPath = $(this).css('background-image');
+        $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $autoPath + '">');
+        if ($(window).width() < 820) {
+          $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
+        }
+        else if ($(window).width() > 1280) {
+          $('.js-lightbox-content-container').css({'width':'62.5%', 'max-height':'80%', 'overflow':'scroll'});
+        }
+        else {
+          $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
+        }
+      }
+    }
 
     //Video
     if ($type === "video"){
