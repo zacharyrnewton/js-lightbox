@@ -32,7 +32,7 @@ $( ".lb-js" ).each(function() {
     }
 
     //Trans Theme
-    if ($theme === "trans") {
+    else if ($theme === "trans") {
       $('.js-lightbox-wrapper').css({'background':'rgba(10,10,10,0.8)'});
       $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
       $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
@@ -96,7 +96,7 @@ $( ".lb-js" ).each(function() {
       }
     }
 
-    //Site Image
+    //Image
     if ($type === "image"){
       $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $path + '">');
       if ($(window).width() < 820) {
@@ -110,7 +110,7 @@ $( ".lb-js" ).each(function() {
       }
     }
 
-    //Site Video
+    //Video
     if ($type === "video"){
       $('.js-lightbox-content-container').append('<video style="width:100%;height:auto;" controls autoplay><source src="' + $path + '" type="video/mp4"> </video>');
       if ($(window).width() < 820) {
