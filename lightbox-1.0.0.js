@@ -126,7 +126,7 @@ $( ".lb-js" ).each(function() {
         }
       } else {
         var $autoPath = $(this).css('background-image');
-        $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $autoPath + '">');
+        $('.js-lightbox-content-container').css({'background-image':' ' + $autoPath + ' ', 'background-size':'contain','background-position':'center center', 'background-repeat':'no-repeat','height':'80%'});
         if ($(window).width() < 820) {
           $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
         }
