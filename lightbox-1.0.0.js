@@ -151,29 +151,31 @@ $( ".lb-js" ).each(function() {
 
     //Image Auto
     if ($path === "auto"){
+      //Image Element
       if (this.hasAttribute("src")){
         var $autoPathImg = $(this).attr('src');
-        $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $autoPathImg + '">');
+        $('.js-lightbox-content-container').append('<img style="width:auto;height:100%;object-fit:contain;" src="' + $autoPathImg + '">');
         if ($(window).width() < 820) {
-          $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
+          $('.js-lightbox-content-container').css({'max-width':'95%', 'height':'80%'});
         }
         else if ($(window).width() > 1280) {
-          $('.js-lightbox-content-container').css({'width':'62.5%', 'max-height':'80%', 'overflow':'scroll'});
+          $('.js-lightbox-content-container').css({'max-width':'62.5%', 'height':'80%'});
         }
         else {
-          $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
+          $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'height':'80%'});
         }
       } else {
+        //CSS Background Image
         var $autoPath = $(this).css('background-image').replace(/^.*\/\/[^\/]+/, '').replace('"','').replace(')','');
-        $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $autoPath + '">');
+        $('.js-lightbox-content-container').append('<img style="width:auto;height:100%;object-fit:contain;" src="' + $autoPath + '">');
         if ($(window).width() < 820) {
-          $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
+          $('.js-lightbox-content-container').css({'max-width':'95%', 'height':'80%'});
         }
         else if ($(window).width() > 1280) {
-          $('.js-lightbox-content-container').css({'width':'62.5%', 'max-height':'80%', 'overflow':'scroll'});
+          $('.js-lightbox-content-container').css({'max-width':'62.5%', 'height':'80%'});
         }
         else {
-          $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
+          $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'height':'80%'});
         }
       }
     }
