@@ -27,43 +27,37 @@ $( ".lb-js" ).each(function() {
     //Light Theme
     if ($theme === "light") {
       $('.js-lightbox-wrapper').css({'background':'#FFFFFF'});
-      $('.js-lightbox-close-left-diagonal').css({'background':'#000000'});
-      $('.js-lightbox-close-right-diagonal').css({'background':'#000000'});
+      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#000000'});
     }
 
     //Trans Theme
     else if ($theme === "trans") {
       $('.js-lightbox-wrapper').css({'background':'rgba(10,10,10,0.8)'});
-      $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
-      $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
     }
 
     //Cool
     else if ($theme === "cool") {
       $('.js-lightbox-wrapper').css({'background':'#000014'});
-      $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
-      $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
     }
 
     //Warm
     else if ($theme === "warm") {
       $('.js-lightbox-wrapper').css({'background':'#140A00'});
-      $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
-      $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
     }
 
     //Custom
     else if ($theme === "custom") {
       $('.js-lightbox-wrapper').css({'background':' ' + $cust_theme + ' ','background-size':'cover','background-position':'center center'});
-      $('.js-lightbox-close-left-diagonal').css({'background':' ' + $cust_theme_close + ' '});
-      $('.js-lightbox-close-right-diagonal').css({'background':' ' + $cust_theme_close + ' '});
+      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':' ' + $cust_theme_close + ' '});
     }
 
     //Default Dark Theme
     else {
       $('.js-lightbox-wrapper').css({'background':'#111'});
-      $('.js-lightbox-close-left-diagonal').css({'background':'#FFFFFF'});
-      $('.js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
     }
 
     //Content Type
