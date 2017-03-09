@@ -126,7 +126,6 @@ $( ".lb-js" ).each(function() {
         }
       } else {
         var $autoPath = $(this).css('background-image').replace(/^.*\/\/[^\/]+/, '').replace('"','').replace(')','');
-        alert($autoPath);
         $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $autoPath + '">');
         if ($(window).width() < 820) {
           $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
