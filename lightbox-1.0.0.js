@@ -111,8 +111,7 @@ $( ".lb-js" ).each(function() {
     }
     //Image Auto
     if ($path === "auto"){
-      var $element = $(this).tagName;
-      if ($element === "IMG"){
+      if (this.hasAttribute("src")){
         var $autoPathImg = $(this).attr('src');
         $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $autoPathImg + '">');
         if ($(window).width() < 820) {
