@@ -1,3 +1,7 @@
+//Global Variables
+var $themeGlobal = $('body').attr('data-theme');
+var $cust_themeGlobal = $('body').attr('data-custom-theme');
+var $cust_theme_closeGlobal = $('body').attr('data-custom-theme-close');
 $( ".lb-js" ).each(function() {
   var $modal_content = $( ".lb-js-modal" ).clone();
   $( ".lb-js-modal" ).children().hide();
@@ -23,42 +27,83 @@ $( ".lb-js" ).each(function() {
     $('.js-lightbox-close-right-diagonal').css({'content':'""', 'display':'block', 'height':'2px', 'width':'16px', 'position':'relative', 'transform-origin': 'center', 'transform': 'rotate(45deg) translateY(-1.35px)'});
 
     //Themes
+    if (this.hasAttribute('data-theme')) {
 
-    //Light Theme
-    if ($theme === "light") {
-      $('.js-lightbox-wrapper').css({'background':'#FFFFFF'});
-      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#000000'});
+      //Light Theme
+      if ($theme === "light") {
+        $('.js-lightbox-wrapper').css({'background':'#FFFFFF'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#000000'});
+      }
+
+      //Trans Theme
+      else if ($theme === "trans") {
+        $('.js-lightbox-wrapper').css({'background':'rgba(10,10,10,0.8)'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      }
+
+      //Cool
+      else if ($theme === "cool") {
+        $('.js-lightbox-wrapper').css({'background':'#000014'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      }
+
+      //Warm
+      else if ($theme === "warm") {
+        $('.js-lightbox-wrapper').css({'background':'#140A00'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      }
+
+      //Custom
+      else if ($theme === "custom") {
+        $('.js-lightbox-wrapper').css({'background':' ' + $cust_theme + ' ','background-size':'cover','background-position':'center center'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':' ' + $cust_theme_close + ' '});
+      }
+
+      //Default Dark Theme
+      else {
+        $('.js-lightbox-wrapper').css({'background':'#111'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      }
+
+    } else {
+
+      //Light Theme
+      if ($themeGlobal === "light") {
+        $('.js-lightbox-wrapper').css({'background':'#FFFFFF'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#000000'});
+      }
+
+      //Trans Theme
+      else if ($themeGlobal === "trans") {
+        $('.js-lightbox-wrapper').css({'background':'rgba(10,10,10,0.8)'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      }
+
+      //Cool
+      else if ($themeGlobal === "cool") {
+        $('.js-lightbox-wrapper').css({'background':'#000014'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      }
+
+      //Warm
+      else if ($themeGlobal === "warm") {
+        $('.js-lightbox-wrapper').css({'background':'#140A00'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      }
+
+      //Custom
+      else if ($themeGlobal === "custom") {
+        $('.js-lightbox-wrapper').css({'background':' ' + $cust_themeGlobal + ' ','background-size':'cover','background-position':'center center'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':' ' + $cust_theme_closeGlobal + ' '});
+      }
+
+      //Default Dark Theme
+      else {
+        $('.js-lightbox-wrapper').css({'background':'#111'});
+        $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
+      }
     }
 
-    //Trans Theme
-    else if ($theme === "trans") {
-      $('.js-lightbox-wrapper').css({'background':'rgba(10,10,10,0.8)'});
-      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
-    }
-
-    //Cool
-    else if ($theme === "cool") {
-      $('.js-lightbox-wrapper').css({'background':'#000014'});
-      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
-    }
-
-    //Warm
-    else if ($theme === "warm") {
-      $('.js-lightbox-wrapper').css({'background':'#140A00'});
-      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
-    }
-
-    //Custom
-    else if ($theme === "custom") {
-      $('.js-lightbox-wrapper').css({'background':' ' + $cust_theme + ' ','background-size':'cover','background-position':'center center'});
-      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':' ' + $cust_theme_close + ' '});
-    }
-
-    //Default Dark Theme
-    else {
-      $('.js-lightbox-wrapper').css({'background':'#111'});
-      $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
-    }
 
     //Content Type
 
