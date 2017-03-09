@@ -109,6 +109,7 @@ $( ".lb-js" ).each(function() {
         $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
       }
     }
+
     //Image Auto
     if ($path === "auto"){
       if (this.hasAttribute("src")){
