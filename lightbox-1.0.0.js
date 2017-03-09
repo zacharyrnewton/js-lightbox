@@ -125,8 +125,9 @@ $( ".lb-js" ).each(function() {
           $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
         }
       } else {
-        var $autoPath = $(this).css('background-image');
-        $('.js-lightbox-content-container').css({'background-image':' ' + $autoPath + ' ', 'background-size':'contain','background-position':'center center', 'background-repeat':'no-repeat','height':'80%'});
+        var $autoPath = $(this).css('background-image').replace(/^.*\/\/[^\/]+/, '').replace('"','').replace(')','');
+        alert($autoPath);
+        $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $autoPath + '">');
         if ($(window).width() < 820) {
           $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
         }
