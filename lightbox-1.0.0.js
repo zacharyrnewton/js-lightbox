@@ -154,7 +154,7 @@ $( ".lb-js" ).each(function() {
       //Image Element
       if (this.hasAttribute("src")){
         var $autoPathImg = $(this).attr('src');
-        $('.js-lightbox-content-container').append('<img style="max-height:80vh;max-width:95vw;object-fit:contain;" src="' + $autoPathImg + '">');
+        $('.js-lightbox-content-container').append('<img style="max-height:80vh;width:95vw;max-width:1000px;object-fit:contain;" src="' + $autoPathImg + '">');
         if ($(window).width() < 820) {
           $('.js-lightbox-content-container').css({});
         }
@@ -167,7 +167,7 @@ $( ".lb-js" ).each(function() {
       } else {
         //CSS Background Image
         var $autoPath = $(this).css('background-image').replace(/^.*\/\/[^\/]+/, '').replace('"','').replace(')','');
-        $('.js-lightbox-content-container').append('<img style="max-height:80vh;max-width:95vw;object-fit:contain;" src="' + $autoPath + '">');
+        $('.js-lightbox-content-container').append('<img style="max-height:80vh;width:95vw;max-width:1000px;object-fit:contain;" src="' + $autoPath + '">');
         if ($(window).width() < 820) {
           $('.js-lightbox-content-container').css({});
         }
