@@ -137,15 +137,15 @@ $( ".lb-js" ).each(function() {
 
     //Image
     if ($type === "image"){
-      $('.js-lightbox-content-container').append('<img width="100%" height="auto" src="' + $path + '">');
+      $('.js-lightbox-content-container').append('<img style="max-height:80vh;max-width:95vw;object-fit:contain;" src="' + $path + '">');
       if ($(window).width() < 820) {
-        $('.js-lightbox-content-container').css({'width':'95%', 'max-height':'80%', 'overflow':'scroll'});
+        $('.js-lightbox-content-container').css({});
       }
       else if ($(window).width() > 1280) {
-        $('.js-lightbox-content-container').css({'width':'62.5%', 'max-height':'80%', 'overflow':'scroll'});
+        $('.js-lightbox-content-container').css({});
       }
       else {
-        $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'max-height':'80%', 'overflow':'scroll'});
+        $('.js-lightbox-content-container').css({});
       }
     }
 
@@ -154,7 +154,7 @@ $( ".lb-js" ).each(function() {
       //Image Element
       if (this.hasAttribute("src")){
         var $autoPathImg = $(this).attr('src');
-        $('.js-lightbox-content-container').append('<img style="max-height:80vh;width:95vw;max-width:1000px;object-fit:contain;" src="' + $autoPathImg + '">');
+        $('.js-lightbox-content-container').append('<img style="max-height:80vh;max-width:95vw;object-fit:contain;" src="' + $autoPathImg + '">');
         if ($(window).width() < 820) {
           $('.js-lightbox-content-container').css({});
         }
@@ -167,7 +167,7 @@ $( ".lb-js" ).each(function() {
       } else {
         //CSS Background Image
         var $autoPath = $(this).css('background-image').replace(/^.*\/\/[^\/]+/, '').replace('"','').replace(')','');
-        $('.js-lightbox-content-container').append('<img style="max-height:80vh;width:95vw;max-width:1000px;object-fit:contain;" src="' + $autoPath + '">');
+        $('.js-lightbox-content-container').append('<img style="max-height:80vh;max-width:95vw;object-fit:contain;" src="' + $autoPath + '">');
         if ($(window).width() < 820) {
           $('.js-lightbox-content-container').css({});
         }
