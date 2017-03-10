@@ -154,28 +154,28 @@ $( ".lb-js" ).each(function() {
       //Image Element
       if (this.hasAttribute("src")){
         var $autoPathImg = $(this).attr('src');
-        $('.js-lightbox-content-container').append('<img style="width:auto;height:100%;object-fit:contain;" src="' + $autoPathImg + '">');
+        $('.js-lightbox-content-container').append('<img style="max-height:80vh;max-width:95vw;object-fit:contain;" src="' + $autoPathImg + '">');
         if ($(window).width() < 820) {
-          $('.js-lightbox-content-container').css({'max-width':'95%', 'height':'80%'});
+          $('.js-lightbox-content-container').css({});
         }
         else if ($(window).width() > 1280) {
-          $('.js-lightbox-content-container').css({'max-width':'62.5%', 'height':'80%'});
+          $('.js-lightbox-content-container').css({});
         }
         else {
-          $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'height':'80%'});
+          $('.js-lightbox-content-container').css({});
         }
       } else {
         //CSS Background Image
         var $autoPath = $(this).css('background-image').replace(/^.*\/\/[^\/]+/, '').replace('"','').replace(')','');
-        $('.js-lightbox-content-container').append('<img style="width:auto;height:100%;object-fit:contain;" src="' + $autoPath + '">');
+        $('.js-lightbox-content-container').append('<img style="max-height:80vh;max-width:95vw;object-fit:contain;" src="' + $autoPath + '">');
         if ($(window).width() < 820) {
-          $('.js-lightbox-content-container').css({'max-width':'95%', 'height':'80%'});
+          $('.js-lightbox-content-container').css({});
         }
         else if ($(window).width() > 1280) {
-          $('.js-lightbox-content-container').css({'max-width':'62.5%', 'height':'80%'});
+          $('.js-lightbox-content-container').css({});
         }
         else {
-          $('.js-lightbox-content-container').css({'width':'95%', 'max-width':'800px', 'height':'80%'});
+          $('.js-lightbox-content-container').css({});
         }
       }
     }
@@ -216,7 +216,7 @@ $( ".lb-js" ).each(function() {
        $('.js-lightbox-wrapper').remove();
      }, 100);
     });
-    $('.js-lightbox-content-container').click(function(event){
+    $('.js-lightbox-content-container').children().click(function(event){
       event.stopPropagation();
     });
   });
