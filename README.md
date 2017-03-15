@@ -1,9 +1,9 @@
-# Lightbox
+# JS Lightbox
 Single JavaScript File LightBox
 
 Requirements:
   jQuery
-  Non-jQuery version coming soon
+  (Non-jQuery version coming soon)
 
 Lightbox Call Class: lb-js
 
