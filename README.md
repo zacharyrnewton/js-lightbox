@@ -1,4 +1,4 @@
-# JS Lightbox
+# JS Lightbox :raised_hands:
 Single JavaScript File LightBox
 
 Requirements:
