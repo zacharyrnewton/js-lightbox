@@ -16,6 +16,8 @@ $( ".lb-js" ).each(function() {
 
   $(this).on('click', function(){
 
+    event.preventDefault();
+
     //Lightbox Hierarchy
     $('body').append('<div class="js-lightbox-wrapper"><div class="js-lightbox-close"><div class="js-lightbox-close-wrapper"><div class="js-lightbox-close-left-diagonal"></div><div class="js-lightbox-close-right-diagonal"></div></div></div><div class="js-lightbox-content-container"></div></div>');
     //Structure
