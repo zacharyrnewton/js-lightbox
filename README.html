@@ -4,21 +4,28 @@
 	<meta charset="utf-8"/>
 </head>
 <body>
-<h1 id="lightbox">JS Lightbox</h1>
+<h1 id="jslightbox">JS Lightbox</h1>
 
 <p>Single JavaScript File LightBox</p>
 
 <p>Requirements:
- jQuery<br>
+ jQuery
  (Non-jQuery version coming soon)</p>
 
 <p>Lightbox Call Class: lb-js</p>
 
+<p>Supported Themes: Dark(default), Light, Cool, Warm, Custom(custom has support for images and the ability to change the color of the lightbox close button)</p>
+
+<p>Global Theme is created by using a data-theme=&#8220;yourTheme&#8221; on the body element.
+Themes applied to individual elements will override the Global theme.</p>
+
 <p>Supported Content Types: Embed, Image, Video</p>
+
+<p>Content type is called using data-type=&#8220;yourContentType&#8221; on your Lightbox element.</p>
 
 <p>Supported Hosts: Youtube, Vimeo</p>
 
-<p>Supported Themes: Dark(default), Light, Cool, Warm, Custom(custom has support for images and the ability to change the color of the lightbox close button)</p>
+<p>Hosts are called using data-host=&#8220;yourHost&#8221; on your Lightbox element (only required for embeds).</p>
 
 </body>
 </html>

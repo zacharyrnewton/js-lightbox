@@ -18,9 +18,9 @@ $( ".lb-js" ).each(function() {
 
     event.preventDefault();
 
-    //Lightbox Hierarchy
+    //Lightbox HTML Hierarchy
     $('body').append('<div class="js-lightbox-wrapper"><div class="js-lightbox-close"><div class="js-lightbox-close-wrapper"><div class="js-lightbox-close-left-diagonal"></div><div class="js-lightbox-close-right-diagonal"></div></div></div><div class="js-lightbox-content-container"></div></div>');
-    //Structure
+    //CSS Structure
     $('.js-lightbox-wrapper').css({'position':'fixed', 'top':'0', 'right':'0', 'bottom':'0', 'left':'0', 'z-index':'1000','display':'flex','flex-direction':'column','align-items':'center','justify-content':'center'}).hide(0).delay(100).fadeIn(100);
     $('.js-lightbox-content-container').css({'z-index':'1005'}).hide(0).delay(100).fadeIn(100);
     $('.js-lightbox-close').css({'position':'absolute', 'top':'20px', 'right':'20px', 'z-index':'1010', 'height':'16px', 'width':'16px', 'cursor':'pointer'});
@@ -63,7 +63,7 @@ $( ".lb-js" ).each(function() {
 
       //Default Dark Theme
       else {
-        $('.js-lightbox-wrapper').css({'background':'#111'});
+        $('.js-lightbox-wrapper').css({'background':'#111111'});
         $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
       }
 
@@ -101,7 +101,7 @@ $( ".lb-js" ).each(function() {
 
       //Default Dark Theme
       else {
-        $('.js-lightbox-wrapper').css({'background':'#111'});
+        $('.js-lightbox-wrapper').css({'background':'#111111'});
         $('.js-lightbox-close-left-diagonal, .js-lightbox-close-right-diagonal').css({'background':'#FFFFFF'});
       }
     }
