@@ -8,7 +8,7 @@ Requirements:
 Lightbox Call Class: lb-js
 
 
-Supported Themes: Dark(default), Light, Cool, Warm, Custom(custom has support for images and the ability to change the color of the lightbox close button)
+Supported Themes: Dark(default), Light, Cool, Warm, Custom(custom has support for images and the ability to change the color of the lightbox close button).
 
 Global Theme is created by using a data-theme="yourTheme" on the body element.
 Themes applied to individual elements will override the Global theme.
@@ -22,3 +22,5 @@ Content type is called using data-type="yourContentType" on your Lightbox elemen
 Supported Hosts: Youtube, Vimeo
 
 Hosts are called using data-host="yourHost" on your Lightbox element (only required for embeds).
+
+Lightbox Path: written as data-path="yourPath", this is the path to the image or video you wish to appear in the Lightbox. data-path="auto" is only available for images and works for both the img element and background images; it removes the need to write out the full path to the image along with data-type="img"
