@@ -1,11 +1,13 @@
 # JS Lightbox
 Single JavaScript File LightBox
 
-Requirements:
-  jQuery
-  (Non-jQuery version coming soon)
+---
+### What you need
+* Requirements:
+    * jQuery
 
-Lightbox Call Class: lb-js
+### How to get started
+1. To run the Lightbox function, all you have to do is add the class "lb-js" to the HTML element you wish to be a trigger. *This can be anything from an anchor tag to an img element*
 
 
 Supported Themes: Dark(default), Light, Cool, Warm, Custom(custom has support for images and the ability to change the color of the lightbox close button).
