@@ -7,10 +7,15 @@ Single JavaScript File LightBox
     * jQuery
 
 ### How to get started
-1. To run the Lightbox function, all you have to do is add the class "lb-js" to the HTML element you wish to be a trigger. *This can be anything from an anchor tag to an img element*
+1. **To run the Lightbox function**, all you have to do is add the class "lb-js" to the HTML element you wish to be a trigger. *This can be anything from an anchor tag to an img element*
 
-
-Supported Themes: Dark(default), Light, Cool, Warm, Custom(custom has support for images and the ability to change the color of the lightbox close button).
+2. **Themes**:
+    * Available themes
+        * Dark (default)
+        * Light
+        * Cool
+        * Warm
+        * Custom (with the custom theme, you can use a primary and secondary color, or you can use an image along with a secondary color)
 
 Global Theme is created by using a data-theme="yourTheme" on the body element.
 Themes applied to individual elements will override the Global theme.
