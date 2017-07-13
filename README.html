@@ -23,19 +23,25 @@
 <h3 id="howtogetstarted">How to get started</h3>
 
 <ol>
-<li><p><strong>To run the Lightbox function</strong>, all you have to do is add the class &#8220;lb-js&#8221; to the HTML element you wish to be a trigger. <em>This can be anything from an anchor tag to an img element</em></p></li>
+<li><p><strong>To run the Lightbox function</strong>, all you have to do is add the class <code>lb-js</code> to the HTML element you wish to be a trigger. <em>This can be anything from an anchor tag to an img element</em></p></li>
 <li><strong>Themes</strong>:
+
+<ul>
+<li>To set a <em>Global Theme</em>, all you need to do is add <code>data-theme=&quot;yourTheme&quot;</code> to the body element.
 
 <ul>
 <li>Available themes
 
 <ul>
-<li>Dark (default)</li>
-<li>Light</li>
-<li>Cool</li>
-<li>Warm</li>
+<li>Dark (default) <em>written as</em> <code>data-theme=&quot;dark&quot;</code></li>
+<li>Light <em>written as</em> <code>data-theme=&quot;light&quot;</code></li>
+<li>Cool <em>written as</em> <code>data-theme=&quot;cool&quot;</code></li>
+<li>Warm <em>written as</em> <code>data-theme=&quot;warm&quot;</code></li>
 <li>Custom (with the custom theme, you can use a primary and secondary color, or you can use an image along with a secondary color)</li>
 </ul></li>
+</ul></li>
+<li>Any theme added to an element with the <code>lb-js</code> class will override the <em>Global Theme</em> for that element only.</li>
+<li>For a custom theme, add <code>data-theme=&quot;custom&quot;</code> along with <code>data-custom-theme=&quot;yourColorOrImagePath&quot;</code> for the primary color, and <code>data-custom-theme-close=&quot;yourColor&quot;</code> for the secondary color to your element.</li>
 </ul></li>
 </ol>
 
