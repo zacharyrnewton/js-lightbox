@@ -1,6 +1,3 @@
-<div class="page-header">
-# Anus
-</div>
 # JS Lightbox
 Single JavaScript File LightBox
 
