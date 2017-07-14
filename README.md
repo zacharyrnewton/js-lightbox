@@ -1,6 +1,6 @@
 # JS Lightbox
 Single JavaScript File LightBox
-<a href="" class="btn"></a>
+<a href="" class="btn">Download lightbox-1.0.0.min.js</a>
 
 ---
 ### What you need
