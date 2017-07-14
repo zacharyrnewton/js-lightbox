@@ -1,6 +1,7 @@
 # JS Lightbox
 Single JavaScript File LightBox
 <a href="" class="btn"></a>
+
 ---
 ### What you need
 * Requirements:
