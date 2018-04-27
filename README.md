@@ -14,6 +14,7 @@ Single JavaScript File LightBox <br>
     * To set a *Global Theme*, all you need to do is add `data-theme="yourTheme"` to the body element.
         * Available themes
             * Dark (*default*) *written as* `data-theme="dark"`
+            * Trans *written as* `data-theme="trans"`
             * Light *written as* `data-theme="light"`
             * Cool *written as* `data-theme="cool"`
             * Warm *written as* `data-theme="warm"`
